@@ -23,7 +23,7 @@ class PizzaApp(QMainWindow):
             checkbox.stateChanged.connect(self.update_table)
 
         # Táblázat inicializálása
-        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setColumnCount(2) # Oszlopok száma
         self.tableWidget.setHorizontalHeaderLabels(["Tétel", "Ár"])
         self.tableWidget.setColumnWidth(0, 300)  # Tétel oszlop szélessége
         self.tableWidget.setColumnWidth(1, 90)  # Ár oszlop szélessége
@@ -37,20 +37,20 @@ class PizzaApp(QMainWindow):
         crust = self.comboBox.currentText()
         sauce = self.comboBox_2.currentText()
 
-        crust_price = 0
+        crust_price = 900
         sauce_price = 0
 
         if crust == "Vékony tészta":
-            crust_price = 100
+            crust_price += 100
         elif crust == "Vastag tészta":
-            crust_price = 200
+            crust_price += 200
         elif crust == "Sajt szélű tészta":
-            crust_price = 300
+            crust_price += 300
 
         if sauce == "Paradicsomos alap":
-            sauce_price = 100
+            sauce_price = +100
         elif sauce == "Tejszínes alap":
-            sauce_price = 100
+            sauce_price = +100
 
         self.update_total_price(crust_price + sauce_price)
 

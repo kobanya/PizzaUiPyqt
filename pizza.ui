@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>858</width>
+    <width>898</width>
     <height>559</height>
    </rect>
   </property>
@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label_teszta">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>30</y>
      <width>181</width>
      <height>17</height>
@@ -35,7 +35,7 @@
   <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>50</y>
      <width>161</width>
      <height>25</height>
@@ -111,7 +111,7 @@
     <rect>
      <x>0</x>
      <y>80</y>
-     <width>381</width>
+     <width>421</width>
      <height>16</height>
     </rect>
    </property>
@@ -206,7 +206,7 @@
   <widget class="QCheckBox" name="checkBox_5">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>220</x>
      <y>230</y>
      <width>181</width>
      <height>23</height>
@@ -232,7 +232,7 @@
   <widget class="QCheckBox" name="checkBox_7">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>220</x>
      <y>130</y>
      <width>181</width>
      <height>23</height>
@@ -245,7 +245,7 @@
   <widget class="QCheckBox" name="checkBox_8">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>220</x>
      <y>150</y>
      <width>181</width>
      <height>23</height>
@@ -258,7 +258,7 @@
   <widget class="QCheckBox" name="checkBox_9">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>220</x>
      <y>170</y>
      <width>191</width>
      <height>23</height>
@@ -271,7 +271,7 @@
   <widget class="QCheckBox" name="checkBox_10">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>220</x>
      <y>190</y>
      <width>181</width>
      <height>23</height>
@@ -284,10 +284,10 @@
   <widget class="QCheckBox" name="checkBox_11">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>210</y>
+     <x>220</x>
+     <y>212</y>
      <width>181</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -313,7 +313,7 @@
      <x>460</x>
      <y>10</y>
      <width>401</width>
-     <height>192</height>
+     <height>251</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -338,10 +338,16 @@
     <property name="text">
      <string>Új oszlop</string>
     </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Ár</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignLeading|AlignVCenter</set>
     </property>
    </column>
   </widget>
@@ -349,7 +355,7 @@
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>390</y>
+     <y>460</y>
      <width>401</width>
      <height>28</height>
     </rect>
@@ -367,7 +373,7 @@
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>210</y>
+     <y>280</y>
      <width>401</width>
      <height>41</height>
     </rect>
@@ -436,9 +442,9 @@
    <widget class="QCheckBox" name="checkBox_16">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>220</x>
       <y>30</y>
-      <width>171</width>
+      <width>151</width>
       <height>23</height>
      </rect>
     </property>
@@ -452,7 +458,7 @@
     <rect>
      <x>-10</x>
      <y>250</y>
-     <width>441</width>
+     <width>431</width>
      <height>20</height>
     </rect>
    </property>
