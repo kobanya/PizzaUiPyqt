@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>817</width>
-    <height>438</height>
+    <width>858</width>
+    <height>559</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QLabel" name="label_teszta">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>30</x>
      <y>30</y>
      <width>181</width>
      <height>17</height>
@@ -35,7 +35,7 @@
   <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>30</x>
      <y>50</y>
      <width>161</width>
      <height>25</height>
@@ -65,7 +65,7 @@
   <widget class="QLabel" name="label_alap">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>230</x>
      <y>30</y>
      <width>181</width>
      <height>17</height>
@@ -84,7 +84,7 @@
   <widget class="QComboBox" name="comboBox_2">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>230</x>
      <y>50</y>
      <width>161</width>
      <height>25</height>
@@ -122,10 +122,10 @@
   <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
-     <x>373</x>
-     <y>0</y>
+     <x>420</x>
+     <y>20</y>
      <width>20</width>
-     <height>261</height>
+     <height>541</height>
     </rect>
    </property>
    <property name="orientation">
@@ -154,7 +154,7 @@
   <widget class="QCheckBox" name="checkBox">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>130</y>
      <width>151</width>
      <height>23</height>
@@ -167,7 +167,7 @@
   <widget class="QCheckBox" name="checkBox_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>150</y>
      <width>141</width>
      <height>23</height>
@@ -180,7 +180,7 @@
   <widget class="QCheckBox" name="checkBox_3">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>170</y>
      <width>141</width>
      <height>23</height>
@@ -193,7 +193,7 @@
   <widget class="QCheckBox" name="checkBox_4">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>190</y>
      <width>141</width>
      <height>23</height>
@@ -206,7 +206,7 @@
   <widget class="QCheckBox" name="checkBox_5">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>200</x>
      <y>230</y>
      <width>181</width>
      <height>23</height>
@@ -219,7 +219,7 @@
   <widget class="QCheckBox" name="checkBox_6">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>230</y>
      <width>141</width>
      <height>23</height>
@@ -232,7 +232,7 @@
   <widget class="QCheckBox" name="checkBox_7">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>200</x>
      <y>130</y>
      <width>181</width>
      <height>23</height>
@@ -245,7 +245,7 @@
   <widget class="QCheckBox" name="checkBox_8">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>200</x>
      <y>150</y>
      <width>181</width>
      <height>23</height>
@@ -258,7 +258,7 @@
   <widget class="QCheckBox" name="checkBox_9">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>200</x>
      <y>170</y>
      <width>191</width>
      <height>23</height>
@@ -271,7 +271,7 @@
   <widget class="QCheckBox" name="checkBox_10">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>200</x>
      <y>190</y>
      <width>181</width>
      <height>23</height>
@@ -284,7 +284,7 @@
   <widget class="QCheckBox" name="checkBox_11">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>200</x>
      <y>210</y>
      <width>181</width>
      <height>23</height>
@@ -297,7 +297,7 @@
   <widget class="QCheckBox" name="checkBox_12">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>20</x>
      <y>210</y>
      <width>151</width>
      <height>23</height>
@@ -310,7 +310,7 @@
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>460</x>
      <y>10</y>
      <width>401</width>
      <height>192</height>
@@ -348,8 +348,8 @@
   <widget class="QLabel" name="label_total_price">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>310</y>
+     <x>460</x>
+     <y>390</y>
      <width>401</width>
      <height>28</height>
     </rect>
@@ -366,7 +366,7 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>460</x>
      <y>210</y>
      <width>401</width>
      <height>41</height>
@@ -408,57 +408,12 @@
     </property>
    </widget>
   </widget>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>270</y>
-     <width>371</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Üdítők</string>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
-   <widget class="QCheckBox" name="checkBox_13">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>161</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Coca cola   390,- Ft</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_14">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>30</y>
-      <width>171</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pepsi cola      390,- Ft</string>
-    </property>
-   </widget>
-  </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>340</y>
-     <width>371</width>
+     <x>20</x>
+     <y>430</y>
+     <width>381</width>
      <height>61</height>
     </rect>
    </property>
@@ -489,6 +444,138 @@
     </property>
     <property name="text">
      <string>Soproni       590,- Ft</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>250</y>
+     <width>441</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>280</y>
+     <width>191</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <italic>false</italic>
+    </font>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>111</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>pepsi.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_14">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pepsi cola      390,- Ft</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>280</y>
+     <width>181</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>coca.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_13">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>151</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Coca cola   390,- Ft</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
