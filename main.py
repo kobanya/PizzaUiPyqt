@@ -29,6 +29,7 @@ class PizzaApp(QMainWindow):
         self.tableWidget.setHorizontalHeaderLabels(["Tétel", "Ár"])
 
         self.row_count = 0
+        self.total_price = 0
 
         self.show()
 
@@ -45,44 +46,48 @@ class PizzaApp(QMainWindow):
             self.tableWidget.setItem(self.row_count, 0, QTableWidgetItem(item_name))
             self.tableWidget.setItem(self.row_count, 1, QTableWidgetItem(str(item_price)))  # Ár beállítása
             self.row_count += 1
+            self.total_price += item_price  # Ár hozzáadása az összesítetthez
         else:
             for row in range(self.tableWidget.rowCount()):
                 name_item = self.tableWidget.item(row, 0)
                 if name_item.text() == item_name:
+                    price_item = self.tableWidget.item(row, 1)
+                    item_price = int(price_item.text())
                     self.tableWidget.removeRow(row)
                     self.row_count -= 1
+                    self.total_price -= item_price  # Ár levonása az összesítettből
 
-        self.calculate_total_price()  # Összesített ár frissítése
+        self.label_total_price.setText(f"Összesen: {self.total_price} Ft")
 
     def calculate_price(self):
         crust = self.comboBox.currentText()
         sauce = self.comboBox_2.currentText()
 
-        price = 0
+        crust_price = 990
+        sauce_price = 0
 
         if crust == "Vékony tészta":
-            price += 100
+            crust_price += 100
         elif crust == "Vastag tészta":
-            price += 200
+            crust_price += 200
         elif crust == "Sajt szélű tészta":
-            price += 300
+            crust_price += 300
 
         if sauce == "Paradicsomos alap":
-            price += 50
+            sauce_price += 100
         elif sauce == "Tejszínes alap":
-            price += 100
+            sauce_price += 100
 
-        self.label_total_price.setText(f"Ár: {price} Ft")
-        self.price = price
+        self.update_total_price(crust_price + sauce_price)
 
-    def calculate_total_price(self):
-        total_price = 0
+    def update_total_price(self, price):
+        self.total_price = price
         for row in range(self.tableWidget.rowCount()):
             price_item = self.tableWidget.item(row, 1)
-            price = int(price_item.text())
-            total_price += price
+            item_price = int(price_item.text())
+            self.total_price += item_price
 
-        self.label_total_price.setText(f"Összesen: {total_price} Ft")
+        self.label_total_price.setText(f"Összesen: {self.total_price} Ft")
 
     def clear_selections(self):
         self.comboBox.setCurrentIndex(0)

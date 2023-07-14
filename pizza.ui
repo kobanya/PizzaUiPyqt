@@ -349,7 +349,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>ÖSSZESEN :  </string>
    </property>
   </widget>
  </widget>
