@@ -9,8 +9,8 @@ class PizzaApp(QMainWindow):
         loadUi("pizza.ui", self)  # .ui fájl betöltése
 
         # Gombokhoz csatlakoztatott eseménykezelők
-        self.comboBox.currentIndexChanged.connect(self.calculate_price)
-        self.comboBox_2.currentIndexChanged.connect(self.calculate_price)
+        self.comboBox.currentIndexChanged.connect(self.update_table)
+        self.comboBox_2.currentIndexChanged.connect(self.update_table)
 
         # CheckBox-okhoz csatlakoztatott eseménykezelők
         checkboxes = [
@@ -23,17 +23,17 @@ class PizzaApp(QMainWindow):
             checkbox.stateChanged.connect(self.update_table)
 
         # Táblázat inicializálása
-        self.tableWidget.setColumnCount(2) # Oszlopok száma
+        self.tableWidget.setColumnCount(2)  # Oszlopok száma
         self.tableWidget.setHorizontalHeaderLabels(["Tétel", "Ár"])
         self.tableWidget.setColumnWidth(0, 300)  # Tétel oszlop szélessége
         self.tableWidget.setColumnWidth(1, 90)  # Ár oszlop szélessége
 
-        self.row_count = 0
-        self.total_price = 0
-
         self.show()
 
-    def calculate_price(self):
+    def update_table(self):
+        self.tableWidget.clearContents()
+        self.tableWidget.setRowCount(0)
+
         crust = self.comboBox.currentText()
         sauce = self.comboBox_2.currentText()
 
@@ -48,64 +48,62 @@ class PizzaApp(QMainWindow):
             crust_price += 300
 
         if sauce == "Paradicsomos alap":
-            sauce_price = +100
+            sauce_price += 100
         elif sauce == "Tejszínes alap":
-            sauce_price = +100
+            sauce_price += 100
 
-        self.update_total_price(crust_price + sauce_price)
+        self.add_item_to_table(crust, crust_price)
+        self.add_item_to_table(sauce, sauce_price)
 
-    def update_table(self):
-        checkbox = self.sender()
-        item_name = checkbox.text().split(" ")[0]  # Első szó a termék neve
-        item_price = int(checkbox.text().split(" ")[-2].strip(",.-"))  # Ár kinyerése
+        checkboxes = [
+            self.checkBox, self.checkBox_2, self.checkBox_3, self.checkBox_4,
+            self.checkBox_5, self.checkBox_6, self.checkBox_7, self.checkBox_8,
+            self.checkBox_9, self.checkBox_10, self.checkBox_11, self.checkBox_12,
+            self.checkBox_13, self.checkBox_14, self.checkBox_15, self.checkBox_16
+        ]
+        for checkbox in checkboxes:
+            if checkbox.isChecked():
+                item_name = checkbox.text().split(" ")[0]  # Első szó a termék neve
+                item_price = int(checkbox.text().split(" ")[-2].strip(",.-"))  # Ár kinyerése
+                self.add_item_to_table(item_name, item_price)
 
-        if checkbox.isChecked():
-            # Ellenőrizzük, hogy az elem már szerepel-e a táblázatban
-            exists = False
-            for row in range(self.tableWidget.rowCount()):
-                name_item = self.tableWidget.item(row, 0)
-                if name_item and name_item.text() == item_name:
-                    exists = True
-                    price_item = self.tableWidget.item(row, 1)
-                    if price_item:
-                        prev_price = int(price_item.text())
-                        self.total_price += item_price - prev_price
-                        price_item.setText(str(item_price))
-                    break
+        self.calculate_total_price()
 
-            # Ha az elem még nem szerepel a táblázatban, adjunk hozzá egy új sort
-            if not exists:
-                row = self.tableWidget.rowCount()
-                self.tableWidget.insertRow(row)
-                self.tableWidget.setItem(row, 0, QTableWidgetItem(item_name))
-                self.tableWidget.setItem(row, 1, QTableWidgetItem(str(item_price)))
-                self.row_count += 1
-                self.total_price += item_price
+    def add_item_to_table(self, item_name, item_price):
+        row_count = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(row_count)
+        self.tableWidget.setItem(row_count, 0, QTableWidgetItem(item_name))
+        self.tableWidget.setItem(row_count, 1, QTableWidgetItem(str(item_price)))
 
-        else:
-            # Ellenőrizzük, hogy az elem szerepel-e a táblázatban, és töröljük
-            for row in range(self.tableWidget.rowCount()):
-                name_item = self.tableWidget.item(row, 0)
-                if name_item and name_item.text() == item_name:
-                    price_item = self.tableWidget.item(row, 1)
-                    if price_item:
-                        prev_price = int(price_item.text())
-                        self.total_price -= prev_price
-                    self.tableWidget.removeRow(row)
-                    self.row_count -= 1
-                    break
-
-        self.label_total_price.setText(f"Összesen:     {self.total_price} Ft")
-
-    def update_total_price(self, price):
-        self.total_price = price
+    def calculate_total_price(self):
+        total_price = 0
         for row in range(self.tableWidget.rowCount()):
             price_item = self.tableWidget.item(row, 1)
             if price_item:
                 item_price = int(price_item.text())
-                self.total_price += item_price
+                total_price += item_price
 
-        self.label_total_price.setText(f"Összesen: {self.total_price} Ft")
+        self.label_total_price.setText(f"Összesen: {total_price} Ft")
+
+    def clear_selections(self):
+        self.comboBox.setCurrentIndex(0)
+        self.comboBox_2.setCurrentIndex(0)
+        self.checkBox.setChecked(False)
+        self.checkBox_2.setChecked(False)
+        self.checkBox_3.setChecked(False)
+        self.checkBox_4.setChecked(False)
+        self.checkBox_5.setChecked(False)
+        self.checkBox_6.setChecked(False)
+        self.checkBox_7.setChecked(False)
+        self.checkBox_8.setChecked(False)
+        self.checkBox_9.setChecked(False)
+        self.checkBox_10.setChecked(False)
+        self.checkBox_11.setChecked(False)
+        self.checkBox_12.setChecked(False)
+        self.checkBox_13.setChecked(False)
+        self.checkBox_14.setChecked(False)
+        self.checkBox_15.setChecked(False)
+        self.checkBox_16.setChecked(False)
 
 
 if __name__ == "__main__":
