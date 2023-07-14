@@ -25,6 +25,10 @@ class PizzaApp(QMainWindow):
         self.checkBox_10.stateChanged.connect(self.update_table)
         self.checkBox_11.stateChanged.connect(self.update_table)
         self.checkBox_12.stateChanged.connect(self.update_table)
+        self.checkBox_13.stateChanged.connect(self.update_table)
+        self.checkBox_14.stateChanged.connect(self.update_table)
+        self.checkBox_15.stateChanged.connect(self.update_table)
+        self.checkBox_16.stateChanged.connect(self.update_table)
 
         # Táblázat inicializálása
         self.tableWidget.setColumnCount(2)
@@ -125,7 +129,10 @@ class PizzaApp(QMainWindow):
         self.checkBox_10.setChecked(False)
         self.checkBox_11.setChecked(False)
         self.checkBox_12.setChecked(False)
-
+        self.checkBox_13.setChecked(False)
+        self.checkBox_14.setChecked(False)
+        self.checkBox_15.setChecked(False)
+        self.checkBox_16.setChecked(False)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
