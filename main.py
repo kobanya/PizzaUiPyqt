@@ -23,6 +23,8 @@ class PizzaApp(QMainWindow):
         self.checkBox_8.stateChanged.connect(self.update_table)
         self.checkBox_9.stateChanged.connect(self.update_table)
         self.checkBox_10.stateChanged.connect(self.update_table)
+        self.checkBox_11.stateChanged.connect(self.update_table)
+        self.checkBox_12.stateChanged.connect(self.update_table)
 
         # Táblázat inicializálása
         self.tableWidget.setColumnCount(2)
@@ -36,26 +38,42 @@ class PizzaApp(QMainWindow):
     def update_table(self):
         checkbox = self.sender()
         item_name = checkbox.text().split(" ")[0]  # Első szó a termék neve
-        item_price = 0
+        item_price = int(checkbox.text().split(" ")[-2].strip(",.-"))  # Ár kinyerése
 
         if checkbox.isChecked():
-            item_price_str = checkbox.text().split(" ")[-2]  # Utolsó előtti szó az ár
-            item_price = int(item_price_str.strip(",.-"))  # Ár kinyerése
-
-            self.tableWidget.insertRow(self.row_count)
-            self.tableWidget.setItem(self.row_count, 0, QTableWidgetItem(item_name))
-            self.tableWidget.setItem(self.row_count, 1, QTableWidgetItem(str(item_price)))  # Ár beállítása
-            self.row_count += 1
-            self.total_price += item_price  # Ár hozzáadása az összesítetthez
-        else:
+            # Ellenőrizzük, hogy az elem már szerepel-e a táblázatban
+            exists = False
             for row in range(self.tableWidget.rowCount()):
                 name_item = self.tableWidget.item(row, 0)
-                if name_item.text() == item_name:
+                if name_item and name_item.text() == item_name:
+                    exists = True
                     price_item = self.tableWidget.item(row, 1)
-                    item_price = int(price_item.text())
+                    if price_item:
+                        prev_price = int(price_item.text())
+                        self.total_price += item_price - prev_price
+                        price_item.setText(str(item_price))
+                    break
+
+            # Ha az elem még nem szerepel a táblázatban, adjunk hozzá egy új sort
+            if not exists:
+                self.tableWidget.insertRow(self.row_count)
+                self.tableWidget.setItem(self.row_count, 0, QTableWidgetItem(item_name))
+                self.tableWidget.setItem(self.row_count, 1, QTableWidgetItem(str(item_price)))
+                self.row_count += 1
+                self.total_price += item_price
+
+        else:
+            # Ellenőrizzük, hogy az elem szerepel-e a táblázatban, és töröljük
+            for row in range(self.tableWidget.rowCount()):
+                name_item = self.tableWidget.item(row, 0)
+                if name_item and name_item.text() == item_name:
+                    price_item = self.tableWidget.item(row, 1)
+                    if price_item:
+                        prev_price = int(price_item.text())
+                        self.total_price -= prev_price
                     self.tableWidget.removeRow(row)
                     self.row_count -= 1
-                    self.total_price -= item_price  # Ár levonása az összesítettből
+                    break
 
         self.label_total_price.setText(f"Összesen: {self.total_price} Ft")
 
