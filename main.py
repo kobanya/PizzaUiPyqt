@@ -29,11 +29,34 @@ class PizzaApp(QMainWindow):
         # Táblázat inicializálása
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setHorizontalHeaderLabels(["Tétel", "Ár"])
+        self.tableWidget.setColumnWidth(0, 300)  # Tétel oszlop szélessége
+        self.tableWidget.setColumnWidth(1, 90)  # Ár oszlop szélessége
 
         self.row_count = 0
         self.total_price = 0
 
         self.show()
+
+    def calculate_price(self):
+        crust = self.comboBox.currentText()
+        sauce = self.comboBox_2.currentText()
+
+        crust_price = 0
+        sauce_price = 0
+
+        if crust == "Vékony tészta":
+            crust_price = 100
+        elif crust == "Vastag tészta":
+            crust_price = 200
+        elif crust == "Sajt szélű tészta":
+            crust_price = 300
+
+        if sauce == "Paradicsomos alap":
+            sauce_price = 100
+        elif sauce == "Tejszínes alap":
+            sauce_price = 100
+
+        self.update_total_price(crust_price + sauce_price)
 
     def update_table(self):
         checkbox = self.sender()
@@ -56,9 +79,10 @@ class PizzaApp(QMainWindow):
 
             # Ha az elem még nem szerepel a táblázatban, adjunk hozzá egy új sort
             if not exists:
-                self.tableWidget.insertRow(self.row_count)
-                self.tableWidget.setItem(self.row_count, 0, QTableWidgetItem(item_name))
-                self.tableWidget.setItem(self.row_count, 1, QTableWidgetItem(str(item_price)))
+                row = self.tableWidget.rowCount()
+                self.tableWidget.insertRow(row)
+                self.tableWidget.setItem(row, 0, QTableWidgetItem(item_name))
+                self.tableWidget.setItem(row, 1, QTableWidgetItem(str(item_price)))
                 self.row_count += 1
                 self.total_price += item_price
 
@@ -75,28 +99,7 @@ class PizzaApp(QMainWindow):
                     self.row_count -= 1
                     break
 
-        self.label_total_price.setText(f"Összesen: {self.total_price} Ft")
-
-    def calculate_price(self):
-        crust = self.comboBox.currentText()
-        sauce = self.comboBox_2.currentText()
-
-        crust_price = 990
-        sauce_price = 0
-
-        if crust == "Vékony tészta":
-            crust_price += 100
-        elif crust == "Vastag tészta":
-            crust_price += 200
-        elif crust == "Sajt szélű tészta":
-            crust_price += 300
-
-        if sauce == "Paradicsomos alap":
-            sauce_price += 100
-        elif sauce == "Tejszínes alap":
-            sauce_price += 100
-
-        self.update_total_price(crust_price + sauce_price)
+        self.label_total_price.setText(f"Összesen:     {self.total_price} Ft")
 
     def update_total_price(self, price):
         self.total_price = price
