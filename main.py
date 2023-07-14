@@ -23,8 +23,7 @@ class PizzaApp(QMainWindow):
         self.checkBox_8.stateChanged.connect(self.update_table)
         self.checkBox_9.stateChanged.connect(self.update_table)
         self.checkBox_10.stateChanged.connect(self.update_table)
-        self.checkBox_11.stateChanged.connect(self.update_table)
-        self.checkBox_12.stateChanged.connect(self.update_table)
+
         # Táblázat inicializálása
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setHorizontalHeaderLabels(["Tétel", "Ár"])
@@ -35,32 +34,16 @@ class PizzaApp(QMainWindow):
 
     def update_table(self):
         checkbox = self.sender()
-        item_name = checkbox.text()
+        item_name = checkbox.text().split(" ")[0]  # Első szó a termék neve
         item_price = 0
 
         if checkbox.isChecked():
-            if item_name == "Kolbász":
-                item_price = 350
-            elif item_name == "Sonka":
-                item_price = 350
-            elif item_name == "Szalámi":
-                item_price = 350
-            elif item_name == "Tojás":
-                item_price = 250
-            elif item_name == "Articsóka":
-                item_price = 250
-            elif item_name == "Gomba":
-                item_price = 250
-            elif item_name == "Sajt":
-                item_price = 250
-            elif item_name == "Olajbogyó":
-                item_price = 250
-            elif item_name == "Paprika":
-                item_price = 250
+            item_price_str = checkbox.text().split(" ")[-2]  # Utolsó előtti szó az ár
+            item_price = int(item_price_str.strip(",.-"))  # Ár kinyerése
 
             self.tableWidget.insertRow(self.row_count)
             self.tableWidget.setItem(self.row_count, 0, QTableWidgetItem(item_name))
-            self.tableWidget.setItem(self.row_count, 1, QTableWidgetItem(str(item_price)))
+            self.tableWidget.setItem(self.row_count, 1, QTableWidgetItem(str(item_price)))  # Ár beállítása
             self.row_count += 1
         else:
             for row in range(self.tableWidget.rowCount()):
@@ -68,6 +51,8 @@ class PizzaApp(QMainWindow):
                 if name_item.text() == item_name:
                     self.tableWidget.removeRow(row)
                     self.row_count -= 1
+
+        self.calculate_total_price()  # Összesített ár frissítése
 
     def calculate_price(self):
         crust = self.comboBox.currentText()
@@ -87,8 +72,33 @@ class PizzaApp(QMainWindow):
         elif sauce == "Tejszínes alap":
             price += 100
 
-        self.label_price.setText(f"Ár: {price} Ft")
+        self.label_total_price.setText(f"Ár: {price} Ft")
         self.price = price
+
+    def calculate_total_price(self):
+        total_price = 0
+        for row in range(self.tableWidget.rowCount()):
+            price_item = self.tableWidget.item(row, 1)
+            price = int(price_item.text())
+            total_price += price
+
+        self.label_total_price.setText(f"Összesen: {total_price} Ft")
+
+    def clear_selections(self):
+        self.comboBox.setCurrentIndex(0)
+        self.comboBox_2.setCurrentIndex(0)
+        self.checkBox.setChecked(False)
+        self.checkBox_2.setChecked(False)
+        self.checkBox_3.setChecked(False)
+        self.checkBox_4.setChecked(False)
+        self.checkBox_5.setChecked(False)
+        self.checkBox_6.setChecked(False)
+        self.checkBox_7.setChecked(False)
+        self.checkBox_8.setChecked(False)
+        self.checkBox_9.setChecked(False)
+        self.checkBox_10.setChecked(False)
+        self.checkBox_11.setChecked(False)
+        self.checkBox_12.setChecked(False)
 
 
 if __name__ == "__main__":

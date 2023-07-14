@@ -339,7 +339,7 @@
     </property>
    </column>
   </widget>
-  <widget class="QLabel" name="label_price">
+  <widget class="QLabel" name="label_total_price">
    <property name="geometry">
     <rect>
      <x>390</x>
