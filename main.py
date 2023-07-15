@@ -1,5 +1,5 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
+from PyQt6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QRadioButton
 from PyQt6.uic import loadUi
 
 
@@ -21,6 +21,9 @@ class PizzaApp(QMainWindow):
         ]
         for checkbox in checkboxes:
             checkbox.stateChanged.connect(self.update_table)
+
+        # Radio button-hoz csatlakoztatott eseménykezelő
+        self.radioButton_helyben.toggled.connect(self.update_table)
 
         # Táblázat inicializálása
         self.tableWidget.setColumnCount(2)  # Oszlopok száma
@@ -66,6 +69,12 @@ class PizzaApp(QMainWindow):
                 item_name = checkbox.text().split(" ")[0]  # Első szó a termék neve
                 item_price = int(checkbox.text().split(" ")[-2].strip(",.-"))  # Ár kinyerése
                 self.add_item_to_table(item_name, item_price)
+
+        # Házhozszállítás díjának hozzáadása, ha a RadioButton a "Házhozszállítás" állapotban van
+        if self.radioButton_helyben.isChecked():
+            delivery_item_name = "Házhozszállítás díja"
+            delivery_item_price = 590
+            self.add_item_to_table(delivery_item_name, delivery_item_price)
 
         self.calculate_total_price()
 

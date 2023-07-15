@@ -92,7 +92,7 @@
    </property>
    <item>
     <property name="text">
-     <string>VÁLASSZ!</string>
+     <string>VÁLASSZ alapot!</string>
     </property>
    </item>
    <item>
@@ -392,12 +392,12 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>131</width>
+      <width>191</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Házhozszállítás</string>
+     <string>Házhozszállítás   590,- Ft</string>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton_Kiszallit">
