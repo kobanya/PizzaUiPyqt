@@ -134,6 +134,7 @@ class PizzaApp(QMainWindow):
 
     def show_frame2(self):
         self.stackedWidget.setCurrentIndex(1)
+        self.frame_hazhozszallitas.setVisible(False)
 
 
 if __name__ == "__main__":

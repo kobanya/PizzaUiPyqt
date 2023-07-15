@@ -489,6 +489,9 @@
    </widget>
   </widget>
   <widget class="QFrame" name="frame_hazhozszallitas">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>460</x>
@@ -629,16 +632,19 @@
    </widget>
   </widget>
   <widget class="QStackedWidget" name="stackedWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>440</x>
      <y>20</y>
      <width>441</width>
-     <height>361</height>
+     <height>591</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QFrame" name="frame_2">
@@ -646,8 +652,8 @@
       <rect>
        <x>0</x>
        <y>20</y>
-       <width>441</width>
-       <height>351</height>
+       <width>451</width>
+       <height>581</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -704,7 +710,7 @@
       <property name="geometry">
        <rect>
         <x>190</x>
-        <y>300</y>
+        <y>310</y>
         <width>221</width>
         <height>28</height>
        </rect>
@@ -722,7 +728,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>250</y>
+        <y>260</y>
         <width>401</width>
         <height>41</height>
        </rect>
