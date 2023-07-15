@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>898</width>
-    <height>559</height>
+    <height>641</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,7 +43,7 @@
    </property>
    <item>
     <property name="text">
-     <string>VÁLASSZ!</string>
+     <string>Alap tészta</string>
     </property>
    </item>
    <item>
@@ -59,6 +59,11 @@
    <item>
     <property name="text">
      <string>Sajt szélű tészta</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bacon szélű tészta</string>
     </property>
    </item>
   </widget>
@@ -92,7 +97,7 @@
    </property>
    <item>
     <property name="text">
-     <string>VÁLASSZ alapot!</string>
+     <string>Alap szósz</string>
     </property>
    </item>
    <item>
@@ -103,6 +108,11 @@
    <item>
     <property name="text">
      <string>Tejszínes alap</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Csípős alap</string>
     </property>
    </item>
   </widget>
@@ -125,7 +135,7 @@
      <x>420</x>
      <y>20</y>
      <width>20</width>
-     <height>541</height>
+     <height>631</height>
     </rect>
    </property>
    <property name="orientation">
@@ -354,9 +364,9 @@
   <widget class="QLabel" name="label_total_price">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>510</y>
-     <width>401</width>
+     <x>640</x>
+     <y>280</y>
+     <width>221</width>
      <height>28</height>
     </rect>
    </property>
@@ -373,7 +383,7 @@
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>280</y>
+     <y>330</y>
      <width>401</width>
      <height>41</height>
     </rect>
@@ -419,7 +429,7 @@
     <rect>
      <x>20</x>
      <y>430</y>
-     <width>381</width>
+     <width>401</width>
      <height>61</height>
     </rect>
    </property>
@@ -589,9 +599,9 @@
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>360</y>
+     <y>390</y>
      <width>401</width>
-     <height>121</height>
+     <height>211</height>
     </rect>
    </property>
    <property name="frameShape">
@@ -616,11 +626,112 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>110</x>
       <y>20</y>
       <width>261</width>
       <height>25</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>50</y>
+      <width>261</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>80</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>110</y>
+      <width>251</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>66</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cím:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>66</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Telefon:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Megjegyzés</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>170</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Futár rendelés</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>wolt.jpeg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>

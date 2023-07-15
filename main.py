@@ -41,26 +41,30 @@ class PizzaApp(QMainWindow):
         self.tableWidget.clearContents()
         self.tableWidget.setRowCount(0)
 
-        crust = self.comboBox.currentText()
-        sauce = self.comboBox_2.currentText()
+        teszta = self.comboBox.currentText()
+        alap = self.comboBox_2.currentText()
 
         crust_price = 900
         sauce_price = 0
 
-        if crust == "Vékony tészta":
+        if teszta == "Vékony tészta":
             crust_price += 100
-        elif crust == "Vastag tészta":
+        elif teszta == "Vastag tészta":
             crust_price += 200
-        elif crust == "Sajt szélű tészta":
+        elif teszta == "Sajt szélű tészta":
             crust_price += 300
+        elif teszta == "Bacon szélű tészta":
+            crust_price += 400
 
-        if sauce == "Paradicsomos alap":
+        if alap == "Paradicsomos alap":
             sauce_price += 100
-        elif sauce == "Tejszínes alap":
+        elif alap == "Tejszínes alap":
+            sauce_price += 100
+        elif alap == "Csípős alap":
             sauce_price += 100
 
-        self.add_item_to_table(crust, crust_price)
-        self.add_item_to_table(sauce, sauce_price)
+        self.add_item_to_table(teszta, crust_price)
+        self.add_item_to_table(alap, sauce_price)
 
         checkboxes = [
             self.checkBox, self.checkBox_2, self.checkBox_3, self.checkBox_4,
@@ -99,7 +103,8 @@ class PizzaApp(QMainWindow):
                 item_price = int(price_item.text())
                 total_price += item_price
 
-        self.label_total_price.setText(f"Összesen: {total_price} Ft")
+        self.label_total_price.setStyleSheet("QLabel { color: yellow; }")
+        self.label_total_price.setText(f"Összesen:   {total_price} Ft")
 
     def clear_selections(self):
         self.comboBox.setCurrentIndex(0)
