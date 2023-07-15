@@ -23,13 +23,17 @@ class PizzaApp(QMainWindow):
             checkbox.stateChanged.connect(self.update_table)
 
         # Radio button-hoz csatlakoztatott eseménykezelő
-        self.radioButton_helyben.toggled.connect(self.update_table)
+        self.radioButton_Helyben.toggled.connect(self.update_table)
+        self.radioButton_hazhozszallitas.toggled.connect(self.update_table)
 
         # Táblázat inicializálása
         self.tableWidget.setColumnCount(2)  # Oszlopok száma
         self.tableWidget.setHorizontalHeaderLabels(["Tétel", "Ár"])
         self.tableWidget.setColumnWidth(0, 300)  # Tétel oszlop szélessége
         self.tableWidget.setColumnWidth(1, 90)  # Ár oszlop szélessége
+
+        # Frame_hazhozszallitas kezdeti állapotának beállítása
+        self.frame_hazhozszallitas.setVisible(False)
 
         self.show()
 
@@ -71,10 +75,13 @@ class PizzaApp(QMainWindow):
                 self.add_item_to_table(item_name, item_price)
 
         # Házhozszállítás díjának hozzáadása, ha a RadioButton a "Házhozszállítás" állapotban van
-        if self.radioButton_helyben.isChecked():
+        if self.radioButton_hazhozszallitas.isChecked():
             delivery_item_name = "Házhozszállítás díja"
             delivery_item_price = 590
             self.add_item_to_table(delivery_item_name, delivery_item_price)
+            self.frame_hazhozszallitas.setVisible(True)
+        else:
+            self.frame_hazhozszallitas.setVisible(False)
 
         self.calculate_total_price()
 

@@ -354,8 +354,8 @@
   <widget class="QLabel" name="label_total_price">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>460</y>
+     <x>450</x>
+     <y>510</y>
      <width>401</width>
      <height>28</height>
     </rect>
@@ -387,7 +387,7 @@
    <property name="midLineWidth">
     <number>0</number>
    </property>
-   <widget class="QRadioButton" name="radioButton_helyben">
+   <widget class="QRadioButton" name="radioButton_hazhozszallitas">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -400,7 +400,7 @@
      <string>Házhozszállítás   590,- Ft</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_Kiszallit">
+   <widget class="QRadioButton" name="radioButton_Helyben">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -582,6 +582,45 @@
     </property>
     <property name="tristate">
      <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_hazhozszallitas">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>360</y>
+     <width>401</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>66</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NÉV: </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>20</y>
+      <width>261</width>
+      <height>25</height>
+     </rect>
     </property>
    </widget>
   </widget>
