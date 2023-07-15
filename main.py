@@ -35,6 +35,12 @@ class PizzaApp(QMainWindow):
         # Frame_hazhozszallitas kezdeti állapotának beállítása
         self.frame_hazhozszallitas.setVisible(False)
 
+        # Alapértelmezett állapot beállítása
+        self.stackedWidget.setCurrentIndex(0)
+
+        # PushButton-hoz csatlakoztatott eseménykezelő
+        self.pushButton.clicked.connect(self.show_frame2)
+
         self.show()
 
     def update_table(self):
@@ -125,6 +131,9 @@ class PizzaApp(QMainWindow):
         self.checkBox_14.setChecked(False)
         self.checkBox_15.setChecked(False)
         self.checkBox_16.setChecked(False)
+
+    def show_frame2(self):
+        self.stackedWidget.setCurrentIndex(1)
 
 
 if __name__ == "__main__":
