@@ -39,7 +39,7 @@ class PizzaApp(QMainWindow):
         self.stackedWidget.setCurrentIndex(0)
 
         # PushButton-hoz csatlakoztatott eseménykezelő
-        self.pushButton.clicked.connect(self.show_frame2)
+        self.pushButton.clicked.connect(self.process_order)
 
         self.show()
 
@@ -111,6 +111,7 @@ class PizzaApp(QMainWindow):
 
         self.label_total_price.setStyleSheet("QLabel { color: yellow; }")
         self.label_total_price.setText(f"Összesen:   {total_price} Ft")
+        self.label_total_price_2.setText(f"Összesen fizetendő:   {total_price} Ft")
 
     def clear_selections(self):
         self.comboBox.setCurrentIndex(0)
@@ -132,7 +133,16 @@ class PizzaApp(QMainWindow):
         self.checkBox_15.setChecked(False)
         self.checkBox_16.setChecked(False)
 
-    def show_frame2(self):
+    def process_order(self):
+        nev = self.lineEdit.text()
+        cim = self.lineEdit_2.text()
+        telefon = self.lineEdit_3.text()
+        megjegyzes = self.lineEdit_4.text()
+
+        self.label_13.setText(nev)
+        self.label_15.setText(cim)
+        self.label_17.setText(telefon)
+        self.label_19.setText(megjegyzes)
         self.stackedWidget.setCurrentIndex(1)
         self.frame_hazhozszallitas.setVisible(False)
 
