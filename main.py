@@ -4,6 +4,8 @@ from PyQt6.uic import loadUi
 
 
 class PizzaApp(QMainWindow):
+
+
     def __init__(self):
         super().__init__()
         loadUi("pizza.ui", self)  # .ui fájl betöltése
@@ -40,6 +42,8 @@ class PizzaApp(QMainWindow):
 
         # PushButton-hoz csatlakoztatott eseménykezelő
         self.pushButton.clicked.connect(self.process_order) # futár rendelés gomb
+
+        self.setWindowTitle("Pizza Napoletana - ételrendelés") # az ablak neve
 
         self.show()
 

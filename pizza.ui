@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="accessibleName">
+   <string>Pizza Napolitana </string>
+  </property>
   <widget class="QLabel" name="label_teszta">
    <property name="geometry">
     <rect>
@@ -317,45 +320,6 @@
     <string>Bacon        350,- Ft</string>
    </property>
   </widget>
-  <widget class="QGroupBox" name="groupBox_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>430</y>
-     <width>401</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Sörök</string>
-   </property>
-   <widget class="QCheckBox" name="checkBox_15">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>151</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Kőbányai   590,- Ft</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_16">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>30</y>
-      <width>151</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Soproni       590,- Ft</string>
-    </property>
-   </widget>
-  </widget>
   <widget class="Line" name="line_3">
    <property name="geometry">
     <rect>
@@ -395,15 +359,25 @@
    <property name="checked">
     <bool>false</bool>
    </property>
-   <widget class="QLabel" name="label">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QCheckBox" name="checkBox_14">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
-      <width>111</width>
+      <x>10</x>
+      <y>10</y>
+      <width>163</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pepsi cola      390,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>66</width>
       <height>71</height>
      </rect>
     </property>
@@ -415,19 +389,6 @@
     </property>
     <property name="scaledContents">
      <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_14">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>161</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pepsi cola      390,- Ft</string>
     </property>
    </widget>
   </widget>
@@ -443,6 +404,9 @@
    <property name="title">
     <string/>
    </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
    <property name="checkable">
     <bool>false</bool>
    </property>
@@ -455,9 +419,9 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>50</x>
       <y>40</y>
-      <width>91</width>
+      <width>81</width>
       <height>81</height>
      </rect>
     </property>
@@ -806,11 +770,18 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>50</x>
        <y>90</y>
        <width>301</width>
        <height>17</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="text">
       <string>Házhoz szállított étel - NYUGTA</string>
@@ -966,6 +937,102 @@
     </widget>
    </widget>
   </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>440</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QCheckBox" name="checkBox_15">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>151</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Heineken  590,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>0</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>heineken.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_4">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>440</y>
+     <width>181</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QCheckBox" name="checkBox_16">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>151</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Soproni       590,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>31</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>amstel.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
   <zorder>stackedWidget</zorder>
   <zorder>label_teszta</zorder>
   <zorder>comboBox</zorder>
@@ -986,11 +1053,12 @@
   <zorder>checkBox_10</zorder>
   <zorder>checkBox_11</zorder>
   <zorder>checkBox_12</zorder>
-  <zorder>groupBox_2</zorder>
   <zorder>line_3</zorder>
   <zorder>groupBox_3</zorder>
   <zorder>groupBox_4</zorder>
   <zorder>frame_hazhozszallitas</zorder>
+  <zorder>frame_3</zorder>
+  <zorder>frame_4</zorder>
  </widget>
  <resources/>
  <connections/>
