@@ -20,7 +20,9 @@ class PizzaApp(QMainWindow):
             self.checkBox_9, self.checkBox_10, self.checkBox_11, self.checkBox_12,
             self.checkBox_13, self.checkBox_14, self.checkBox_15, self.checkBox_16,
             self.checkBox_17, self.checkBox_18, self.checkBox_19,
-            self.checkBox_20, self.checkBox_21, self.checkBox_22
+            self.checkBox_20, self.checkBox_21, self.checkBox_22,
+            self.checkBox_23, self.checkBox_24,  self.checkBox_25, self.checkBox_26,
+            self.checkBox_27, self.checkBox_28,  self.checkBox_29, self.checkBox_30
         ]
         for checkbox in checkboxes:
             checkbox.stateChanged.connect(self.update_table)  # ha változik az állapot a táblázat frissül
@@ -83,7 +85,9 @@ class PizzaApp(QMainWindow):
             self.checkBox_9, self.checkBox_10, self.checkBox_11, self.checkBox_12,
             self.checkBox_13, self.checkBox_14, self.checkBox_15, self.checkBox_16,
             self.checkBox_17, self.checkBox_18, self.checkBox_19,
-            self.checkBox_20, self.checkBox_21, self.checkBox_22
+            self.checkBox_20, self.checkBox_21, self.checkBox_22,
+            self.checkBox_23, self.checkBox_24, self.checkBox_25, self.checkBox_26,
+            self.checkBox_27, self.checkBox_28, self.checkBox_29, self.checkBox_30
         ]
         for checkbox in checkboxes:
             if checkbox.isChecked():

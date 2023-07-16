@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>898</width>
+    <width>1183</width>
     <height>626</height>
    </rect>
   </property>
@@ -1210,6 +1210,206 @@
     </property>
    </widget>
   </widget>
+  <widget class="Line" name="line_5">
+   <property name="geometry">
+    <rect>
+     <x>873</x>
+     <y>0</y>
+     <width>31</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>20</y>
+     <width>271</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Fagylalatok  990,- Ft</string>
+   </property>
+   <widget class="QLabel" name="label_28">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>121</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>csoki_fagyi.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_29">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>30</y>
+      <width>101</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>puncs.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_23">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>92</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Csoki fagyi 990,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_24">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>110</y>
+      <width>111</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vegyes fagyi  990,- Ft</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>180</y>
+     <width>271</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Torta szeletek  890,- Ft</string>
+   </property>
+   <widget class="QLabel" name="label_30">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>241</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>tortak.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_25">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>130</y>
+      <width>92</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tiramisu    890,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_26">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>130</y>
+      <width>92</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Puncstorta   890,- ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_27">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>250</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Feketeerdő    890,- FT</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_28">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>250</y>
+      <width>92</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sacher        890,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_29">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>390</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dobostorta    890,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_30">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>92</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Epertorta     890,- Ft</string>
+    </property>
+   </widget>
+  </widget>
   <zorder>stackedWidget</zorder>
   <zorder>label_teszta</zorder>
   <zorder>comboBox</zorder>
@@ -1236,6 +1436,9 @@
   <zorder>frame_4</zorder>
   <zorder>groupBox_Pepper</zorder>
   <zorder>groupBox</zorder>
+  <zorder>line_5</zorder>
+  <zorder>groupBox_2</zorder>
+  <zorder>groupBox_3</zorder>
  </widget>
  <resources/>
  <connections/>
