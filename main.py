@@ -3,9 +3,8 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
 from PyQt6.uic import loadUi
 
 
+
 class PizzaApp(QMainWindow):
-
-
     def __init__(self):
         super().__init__()
         loadUi("pizza.ui", self)  # .ui fájl betöltése
@@ -19,10 +18,12 @@ class PizzaApp(QMainWindow):
             self.checkBox, self.checkBox_2, self.checkBox_3, self.checkBox_4,
             self.checkBox_5, self.checkBox_6, self.checkBox_7, self.checkBox_8,
             self.checkBox_9, self.checkBox_10, self.checkBox_11, self.checkBox_12,
-            self.checkBox_13, self.checkBox_14, self.checkBox_15, self.checkBox_16
+            self.checkBox_13, self.checkBox_14, self.checkBox_15, self.checkBox_16,
+            self.checkBox_17, self.checkBox_18, self.checkBox_19,
+            self.checkBox_20, self.checkBox_21, self.checkBox_22
         ]
         for checkbox in checkboxes:
-            checkbox.stateChanged.connect(self.update_table) # ha változik az állapot a táblázat frissül
+            checkbox.stateChanged.connect(self.update_table)  # ha változik az állapot a táblázat frissül
 
         # Radio button-hoz csatlakoztatott eseménykezelő. Ha házhozszállítás, Beárazom
         self.radioButton_Helyben.toggled.connect(self.update_table)
@@ -41,9 +42,9 @@ class PizzaApp(QMainWindow):
         self.stackedWidget.setCurrentIndex(0)  # 0 indexű Widget
 
         # PushButton-hoz csatlakoztatott eseménykezelő
-        self.pushButton.clicked.connect(self.process_order) # futár rendelés gomb
+        self.pushButton.clicked.connect(self.process_order)  # futár rendelés gomb
 
-        self.setWindowTitle("Pizza Napoletana - ételrendelés") # az ablak neve
+        self.setWindowTitle("Pizza Napoletana - ételrendelés")  # az ablak neve
 
         self.show()
 
@@ -51,12 +52,11 @@ class PizzaApp(QMainWindow):
         self.tableWidget.clearContents()
         self.tableWidget.setRowCount(0)
 
-        teszta = self.comboBox.currentText() # az első két sor a pizza mindig
+        teszta = self.comboBox.currentText()  # az első két sor a pizza mindig
         alap = self.comboBox_2.currentText()
 
         teszta_ara = 900
         alap_ara = 0
-
 
         if teszta == "Vékony tészta":
             teszta_ara += 100
@@ -81,7 +81,9 @@ class PizzaApp(QMainWindow):
             self.checkBox, self.checkBox_2, self.checkBox_3, self.checkBox_4,
             self.checkBox_5, self.checkBox_6, self.checkBox_7, self.checkBox_8,
             self.checkBox_9, self.checkBox_10, self.checkBox_11, self.checkBox_12,
-            self.checkBox_13, self.checkBox_14, self.checkBox_15, self.checkBox_16
+            self.checkBox_13, self.checkBox_14, self.checkBox_15, self.checkBox_16,
+            self.checkBox_17, self.checkBox_18, self.checkBox_19,
+            self.checkBox_20, self.checkBox_21, self.checkBox_22
         ]
         for checkbox in checkboxes:
             if checkbox.isChecked():
@@ -115,28 +117,8 @@ class PizzaApp(QMainWindow):
                 total_price += item_price
 
         self.label_total_price.setStyleSheet("QLabel { color: yellow; }")
-        self.label_total_price.setText(f"Összesen:   {total_price} Ft") # 0-as indexű widget
-        self.label_total_price_2.setText(f"Összesen fizetendő:   {total_price} Ft") #1-es indexű widget
-
-    def clear_selections(self):
-        self.comboBox.setCurrentIndex(0)
-        self.comboBox_2.setCurrentIndex(0)
-        self.checkBox.setChecked(False)
-        self.checkBox_2.setChecked(False)
-        self.checkBox_3.setChecked(False)
-        self.checkBox_4.setChecked(False)
-        self.checkBox_5.setChecked(False)
-        self.checkBox_6.setChecked(False)
-        self.checkBox_7.setChecked(False)
-        self.checkBox_8.setChecked(False)
-        self.checkBox_9.setChecked(False)
-        self.checkBox_10.setChecked(False)
-        self.checkBox_11.setChecked(False)
-        self.checkBox_12.setChecked(False)
-        self.checkBox_13.setChecked(False)
-        self.checkBox_14.setChecked(False)
-        self.checkBox_15.setChecked(False)
-        self.checkBox_16.setChecked(False)
+        self.label_total_price.setText(f"Összesen:   {total_price} Ft")  # 0-as indexű widget
+        self.label_total_price_2.setText(f"Összesen fizetendő:   {total_price} Ft")  # 1-es indexű widget
 
     def process_order(self):
         nev = self.lineEdit.text()
@@ -150,7 +132,6 @@ class PizzaApp(QMainWindow):
         self.label_19.setText(megjegyzes)
         self.stackedWidget.setCurrentIndex(1)
         self.frame_hazhozszallitas.setVisible(False)
-
 
 
 if __name__ == "__main__":

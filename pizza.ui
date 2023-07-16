@@ -7,8 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>898</width>
-    <height>641</height>
+    <height>626</height>
    </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -27,7 +30,6 @@
    </property>
    <property name="font">
     <font>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -81,7 +83,6 @@
    </property>
    <property name="font">
     <font>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -156,7 +157,6 @@
    </property>
    <property name="font">
     <font>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -332,125 +332,6 @@
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>280</y>
-     <width>191</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <italic>false</italic>
-    </font>
-   </property>
-   <property name="title">
-    <string/>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
-   <property name="checked">
-    <bool>false</bool>
-   </property>
-   <widget class="QCheckBox" name="checkBox_14">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>163</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Pepsi cola      390,- Ft</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>66</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>pepsi.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_4">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>280</y>
-     <width>181</width>
-     <height>131</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string/>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-   <property name="checkable">
-    <bool>false</bool>
-   </property>
-   <property name="checked">
-    <bool>false</bool>
-   </property>
-   <widget class="QLabel" name="label_2">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>40</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>coca.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_13">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>151</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Coca cola   390,- Ft</string>
-    </property>
-    <property name="tristate">
-     <bool>false</bool>
-    </property>
-   </widget>
   </widget>
   <widget class="QFrame" name="frame_hazhozszallitas">
    <property name="enabled">
@@ -779,7 +660,6 @@
      <property name="font">
       <font>
        <pointsize>14</pointsize>
-       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
@@ -940,8 +820,8 @@
   <widget class="QFrame" name="frame_3">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>440</y>
+     <x>10</x>
+     <y>510</y>
      <width>191</width>
      <height>111</height>
     </rect>
@@ -955,14 +835,14 @@
    <widget class="QCheckBox" name="checkBox_15">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>80</y>
-      <width>151</width>
+      <width>171</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Heineken  590,- Ft</string>
+     <string>Heineken sör  590,- Ft</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_20">
@@ -988,9 +868,9 @@
   <widget class="QFrame" name="frame_4">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>440</y>
-     <width>181</width>
+     <x>230</x>
+     <y>510</y>
+     <width>191</width>
      <height>111</height>
     </rect>
    </property>
@@ -1005,12 +885,12 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>151</width>
+      <width>171</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Soproni       590,- Ft</string>
+     <string>Soproni sör      590,- Ft</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_21">
@@ -1030,6 +910,303 @@
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_Pepper">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>411</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Üdítők  390,- Ft</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>30</y>
+      <width>71</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>pepper.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>40</y>
+      <width>41</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>sprite.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>fanta.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_25">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>30</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>coke.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>40</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>pepsi.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_17">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>70</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DrPepper 390,- Ft</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>38</width>
+      <height>21</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_14">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>70</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pepsi cola      390,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_13">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>70</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Coca cola   390,- Ft</string>
+    </property>
+    <property name="tristate">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_18">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sprite 390,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_19">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>70</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fanta 390,- Ft</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>411</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Édesség 590, Ft</string>
+   </property>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>snickers.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_26">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>20</y>
+      <width>101</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>mars.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_20">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>21</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Snickers 590,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_21">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>50</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mars 590,- Ft</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_27">
+    <property name="geometry">
+     <rect>
+      <x>175</x>
+      <y>20</y>
+      <width>91</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>twix.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_22">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>50</y>
+      <width>16</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Twix  590,- Ft</string>
     </property>
    </widget>
   </widget>
@@ -1054,11 +1231,11 @@
   <zorder>checkBox_11</zorder>
   <zorder>checkBox_12</zorder>
   <zorder>line_3</zorder>
-  <zorder>groupBox_3</zorder>
-  <zorder>groupBox_4</zorder>
   <zorder>frame_hazhozszallitas</zorder>
   <zorder>frame_3</zorder>
   <zorder>frame_4</zorder>
+  <zorder>groupBox_Pepper</zorder>
+  <zorder>groupBox</zorder>
  </widget>
  <resources/>
  <connections/>
